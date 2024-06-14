@@ -33,11 +33,11 @@ def get_cell_density(numcells, area):
     return numcells/area
 
 cell_density = []
-for k in range(1,4):
-    area = dff.iloc[k]["area"]
-    numcells = df.iloc[k]["numcells"]
-    cell_density.append( get_cell_density(area,numcells))
+for k in range(4):
+    area = df.iloc[k]["area"]
+    numcells = df.iloc[k]["num_cells"]
+    cell_density.append( get_cell_density(numcells,area))
 
 df["cell_density"] = cell_density
 
-
+print(df["cell_density"])
